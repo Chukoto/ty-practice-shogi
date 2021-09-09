@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Chukoto/ts-practice-shogi/issues"
   },
-  "homepage": "https://github.com/Chukoto/ts-practice-shogi#readme"
+  "homepage": "https://github.com/Chukoto/ts-practice-shogi#readme",
+  "devDependencies": {
+    "typescript": "^4.4.2"
+  }
 }
