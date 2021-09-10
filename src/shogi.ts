@@ -8,10 +8,20 @@ class Position {
 }
 
 // 駒を表すクラス
-class Piece {
-  position: Position;
+abstract class Piece {
+  // Pieceクラスとサブクラスでアクセスできるprotected
+  protected position: Position;
 
   constructor(private readonly player: Player, suji: Suji, dan: Dan) {
     this.position = new Position(suji, dan);
   }
+
+  // メソッドの定義
+  // 駒の移動用のメソッド
+  moveTo(position: Position) {
+    this.position = position;
+  }
+
+  // 移動できるかどうかを判定するメソッド
+  abstract canMoveTo(position: Position, player: Player): boolean;
 }
